@@ -1,0 +1,71 @@
+{
+    "$schema": "http://json-schema.org/draft-06/schema#",
+    "id": "https://raw.githubusercontent.com/valueflows/vf-json-schema/master/schemas/EconomicEvent.json",
+    "title": "EconomicEvent",
+    "description": "An inflow or outflow of an economic resource in relation to a process and/or exchange.",
+    "type": "object",
+    "properties": {
+        "action": {
+            "description": "Relates a process input or output to a verb, such as consume, produce, work, improve, etc.",
+            "type": "string"
+        },
+        "quantifiedAs": {
+            "description": "The quantity and unit of the event. This is the quantity that could be used to increment or decrement a resource, depending on the type of resource and type of event.",
+            "$ref": "https://raw.githubusercontent.com/valueflows/vf-json-schema/master/schemas/QuantityValue.json"
+        },
+        "resourceInventoriedAs": {
+            "description": "The economic resource that is decremented or incremented by the economic event, or just what the economic event is about.",
+            "$ref": "https://raw.githubusercontent.com/valueflows/vf-json-schema/master/schemas/EconomicResource.json"
+        },
+        "provider": {
+            "description": "The economic agent from whom the economic event is initiated.",
+            "$ref": "https://raw.githubusercontent.com/valueflows/vf-json-schema/master/schemas/Agent.json"
+        },
+        "receiver": {
+            "description": "The economic agent whom the economic event is for.",
+            "$ref": "https://raw.githubusercontent.com/valueflows/vf-json-schema/master/schemas/Agent.json"
+        },
+        "hasBeginning": {
+            "description": "The starting date and optionally time of the economic event.",
+            "type": "string",
+            "format": "date-time"
+        },
+        "hasEnd": {
+            "description": "The ending date and optionally time of the economic event.",
+            "type": "string",
+            "format": "date-time"
+        },
+        "hasPointInTime": {
+            "description": "The economic event occurs at this date/time instant.",
+            "type": "string",
+            "format": "date-time"
+        },
+        "before": {
+            "description": "The economic event occurs before this date/time.",
+            "type": "string",
+            "format": "date-time"
+        },
+        "after": {
+            "description": "The economic event occurs after this date/time.",
+            "type": "string",
+            "format": "date-time"
+        },
+        "note": {
+            "description": "A textual comment or description.",
+            "type": "string"
+        },
+        "inputOf": {
+            "description": "The process for which this economic event describes an input.",
+            "$ref": "https://raw.githubusercontent.com/valueflows/vf-json-schema/master/schemas/Process.json"
+        },
+        "outputOf": {
+            "description": "The process for which this economic event describes an output.",
+            "$ref": "https://raw.githubusercontent.com/valueflows/vf-json-schema/master/schemas/Process.json"
+        },
+        "under": {
+            "description": "Reference to an agreement between agents which specifies the rules or policies which govern this event.",
+            "$ref": "https://raw.githubusercontent.com/valueflows/vf-json-schema/master/schemas/Agreement.json"
+        }
+    },
+    "required": ["action", "quantifiedAs" ]
+}
