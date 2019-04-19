@@ -1,0 +1,20 @@
+{
+    "$schema": "http://json-schema.org/draft-06/schema#",
+    "id": "https://raw.githubusercontent.com/valueflows/vf-json-schema/master/schemas/Action.json",
+    "title": "Action",
+    "description": "An action verb defining the kind of event, commitment, or intent. It is recommended that the lowercase action verb should be used as the record ID in order that references to `Action`s elsewhere in the system are easily readable.",
+    "type": "object",
+    "properties": {
+        "label": {
+            "description": "The name of the action as it applies to flows.",
+            "type": "string",
+            "enum": ["unload", "load", "consume", "use", "work", "cite", "produce", "accept", "improve", "give", "receive", "raise", "lower"]
+        },
+        "resourceEffect": {
+            "description": "A textual comment or description.",
+            "type": "string",
+            "enum": ["+", "-", "0"]
+        }
+    },
+    "required": ["label", "resourceEffect"]
+}
