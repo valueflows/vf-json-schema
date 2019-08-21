@@ -1,0 +1,18 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/ProposedTo.json",
+    "title": "ProposedTo",
+    "description": "An agent to which the proposal is to be published.",
+    "type": "object",
+    "properties": {
+        "proposedTo": {
+            "description": "The agent to which the proposal is published.",
+            "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/Agent.json"
+        },
+        "proposed": {
+            "description": "The proposal that is published to a specific agent.",
+            "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/Proposal.json"
+        }
+    },
+    "required": ["proposedTo", "proposed"]
+}
