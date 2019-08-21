@@ -1,66 +1,70 @@
 {
-    "$schema": "http://json-schema.org/draft-06/schema#",
-    "id": "https://raw.githubusercontent.com/valueflows/vf-json-schema/master/schemas/Process.json",
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/Process.json",
     "title": "Process",
-    "description": "An activity that changes inputs into outputs.  It could transform or transport economic resource(s), as well as simply issuing a resource so that it is available.",
+    "description": "An activity that changes inputs into outputs.  It could transform or transport economic resource(s).",
     "type": "object",
     "properties": {
         "name": {
             "description": "An informal or formal textual identifier for an object. Does not imply uniqueness.",
             "type": "string"
         },
-        "hasDuration": {
-            "description": "The planned or estimated duration of the process.",
-            "type": "object"
+        "hasBeginning": {
+            "description": "The planned beginning of the process.",
+            "type": "string",
+            "format": "date-time"
         },
-        "processClassifiedAs": {
-            "description": "The primary classification that describes a process, at any level of granularity.",
-            "type": "object",
-            "$ref": "https://raw.githubusercontent.com/valueflows/vf-json-schema/master/schemas/ProcessClassification.json"
+        "hasEnd": {
+            "description": "The planned end of the process.",
+            "type": "string",
+            "format": "date-time"
+        },
+        "before": {
+            "description": "The due date/time of the process.",
+            "type": "string",
+            "format": "date-time"
+        },
+        "after": {
+            "description": "The process can start after this date/time.",
+            "type": "string",
+            "format": "date-time"
+        },
+        "classifiedAs": {
+            "description": "References one or more concepts in a common taxonomy or other classification scheme for purposes of categorization or grouping.",
+            "type": "array",
+                "items": {
+                    "type": "string",
+                    "format": "uri"
+                }
+        },
+        "basedOn": {
+            "description": "The recipe definition or specification for a process.",
+            "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/ProcessSpecification.json"
+        },
+        "classifiedAs": {
+            "description": "References one or more concepts in a common taxonomy or other classification scheme for purposes of categorization or grouping.",
+            "type": "array",
+                "items": {
+                    "type": "string",
+                    "format": "uri"
+                }
+        },
+        "inScopeOf": {
+            "description": "Grouping around something to create a boundary or context, used for documenting, accounting, planning.",
+            "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/Agent.json"
+        },
+        "plannedWithin": {
+            "description": "The process with its inputs and outputs is part of the plan.",
+            "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/Plan.json"
         },
         "finished": {
+            "description": "The process is complete or not. This is irrespective of if the original goal has been met, and indicates that no more will be done.",
             "type": "boolean"
         },
         "note": {
             "description": "A textual comment or description.",
             "type": "string"
         },
-        "inputs": {
-            "description": "Economic events that bring tangible or intangible resources into the process.",
-            "type": "array",
-            "items": {
-                "$ref": "https://raw.githubusercontent.com/valueflows/vf-json-schema/master/schemas/EconomicEvent.json"
-            },
-            "minItems": 1,
-            "uniqueItems": true
-        },
-        "outputs": {
-            "description": "Economic events that produce or change or move tangible or intangible resources.",
-            "type": "array",
-            "items": {
-                "$ref": "https://raw.githubusercontent.com/valueflows/vf-json-schema/master/schemas/EconomicEvent.json"
-            },
-            "minItems": 1,
-            "uniqueItems": true
-        },
-        "committedInputs": {
-            "description": "Planned commitments that bring tangible or intangible resources into the process.",
-            "type": "array",
-            "items": {
-                "$ref": "https://raw.githubusercontent.com/valueflows/vf-json-schema/master/schemas/Commitment.json"
-            },
-            "minItems": 1,
-            "uniqueItems": true
-        },
-        "committedOutputs": {
-            "description": "Planned commitments that produce or change or move tangible or intangible resources.",
-            "type": "array",
-            "items": {
-                "$ref": "https://raw.githubusercontent.com/valueflows/vf-json-schema/master/schemas/Commitment.json"
-            },
-            "minItems": 1,
-            "uniqueItems": true
-        }
     },
     "required": ["name"]
 }

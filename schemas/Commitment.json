@@ -1,8 +1,8 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/EconomicEvent.json",
-    "title": "EconomicEvent",
-    "description": "An observed economic flow, as opposed to a flow planned to happen in the future. It could reflect a change in the quantity of an economic resource. It is also defined by its behavior in relation to the economic resource.",
+    "$id": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/Commitment.json",
+    "title": "Commitment",
+    "description": "A planned economic flow that has been promised by an agent to another agent.",
     "type": "object",
     "properties": {
         "action": {
@@ -18,11 +18,7 @@
             "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/QuantityValue.json"
         },
         "resourceInventoriedAs": {
-            "description": "Economic resource involved in the economic event.",
-            "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/EconomicResource.json"
-        },
-        "toResourceInventoriedAs": {
-            "description": "Additional economic resource on the economic event when needed by the receiver. Used when a transfer or move, or sometimes other actions, requires explicitly identifying an economic resource on the receiving side.",
+            "description": "Economic resource involved in the commitment.",
             "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/EconomicResource.json"
         },
         "resourceClassifiedAs": {
@@ -37,12 +33,20 @@
             "description": "The primary resource specification or definition of an existing or potential economic resource. A resource will have only one, as this specifies exactly what the resource is.",
             "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/ResourceSpecification.json"
         },
+        "stage": {
+            "description": "The last stage the desired economic resource went through.",
+            "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/ProcessSpecification.json"
+        },
+        "state": {
+            "description": "The state of the desired economic resource (pass or fail), after coming out of a test or review process.",
+            "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/Action.json"
+        },
         "provider": {
-            "description": "The economic agent from whom the economic event is initiated.",
+            "description": "The economic agent from whom the commitment is initiated.",
             "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/Agent.json"
         },
         "receiver": {
-            "description": "The economic agent whom the economic event is for.",
+            "description": "The economic agent whom the commitment is for.",
             "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/Agent.json"
         },
         "inScopeOf": {
@@ -50,32 +54,36 @@
             "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/Agent.json"
         },
         "hasBeginning": {
-            "description": "Specific time marking the exact beginning of the economic event.",
+            "description": "The planned beginning of the commitment.",
             "type": "string",
             "format": "date-time"
         },
         "hasEnd": {
-            "description": "Specific time marking the exact end of the economic event.",
+            "description": "The planned end of the commitment.",
             "type": "string",
             "format": "date-time"
         },
         "hasPointInTime": {
-            "description": "Specific time marking the exact time at which the economic event occurred.",
+            "description": "The planned date/time for the commitment.",
             "type": "string",
             "format": "date-time"
         },
         "before": {
-            "description": "Indicates the  economic event occurred prior to this specific time.",
+            "description": "The due date/time of the commitment.",
             "type": "string",
             "format": "date-time"
         },
         "after": {
-            "description": "Indicates the economic event occurred after this specific time.",
+            "description": "The commitment can start after this date/time.",
             "type": "string",
             "format": "date-time"
         },
+        "finished": {
+            "description": "The commitment is complete or not.  This is irrespective of if the original goal has been met, and indicates that no more will be done.",
+            "type": "boolean"
+        },
         "atLocation": {
-            "description": "The place where an economic event occurs.  Usually mappable.",
+            "description": "The place where a commitment occurs.  Usually mappable.",
             "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/SpatialThing.json"
         },
         "note": {
@@ -83,23 +91,23 @@
             "type": "string"
         },
         "inputOf": {
-            "description": "Defines the process to which this event is an input.",
+            "description": "Defines the process to which this commitment is an input.",
             "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/Process.json"
         },
         "outputOf": {
-            "description": "Defines the process for which this event is an output.",
+            "description": "Defines the process for which this commitment is an output.",
             "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/Process.json"
         },
-        "triggeredBy": {
-            "description": "References another economic event that implied this economic event, often based on a prior agreement.",
-            "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/EconomicEvent.json"
-        },
-        "realizationOf": {
-            "description": "This economic event occurs as part of this agreement.",
+        "clauseOf": {
+            "description": "This commitment is part of the agreement.",
             "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/Agreement.json"
         },
+        "independentDemandOf": {
+            "description": "Represents a desired deliverable expected from this plan.",
+            "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/Plan.json"
+        },
         "agreedIn": {
-            "description": "Reference to an agreement between agents which specifies the rules or policies or calculations which govern this economic event.",
+            "description": "Reference to an agreement between agents which specifies the rules or policies or calculations which govern this commitment.",
             "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/Agreement.json"
         }
     },

@@ -1,0 +1,36 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/Scenario.json",
+    "title": "Scenario",
+    "description": "Supports including intents in multiple proposals, as well as a proposal including multiple intents.",
+    "type": "object",
+    "properties": {
+        "name": {
+            "description": "An informal or formal textual identifier for the item. Does not imply uniqueness.",
+            "type": "string"
+        },
+        "hasBeginning": {
+            "description": "The beginning date/time of the scenario, often the beginning of an accounting period.",
+            "type": "string",
+            "format": "date-time"
+        },
+        "hasEnd": {
+            "description": "The ending date/time of the scenario, often the end of an accounting period.",
+            "type": "string",
+            "format": "date-time"
+        },
+        "inScopeOf": {
+            "description": "Grouping around something to create a boundary or context, used for documenting, accounting, planning.",
+            "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/Agent.json"
+        },
+        "note": {
+            "description": "A textual comment or description.",
+            "type": "string"
+        },
+        "refinementOf": {
+            "description": "This scenario refines another scenario, often as time moves closer or for more detail.",
+            "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/Scenario.json"
+        }
+    },
+    "required": ["name"]
+}

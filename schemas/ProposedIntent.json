@@ -1,0 +1,26 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/ProposedIntent.json",
+    "title": "ProposedIntent",
+    "description": "Represents many-to-many relationships between Proposals and Intents, supporting including intents in multiple proposals, as well as a proposal including multiple intents.",
+    "type": "object",
+    "properties": {
+        "publishes": {
+            "description": "The intent which is part of this published proposal.",
+            "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/Intent.json"
+        },
+        "publishedIn": {
+            "description": "The published proposal which this intent is part of.",
+            "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/Proposal.json"
+        },
+        "reciprocal": {
+            "description": "This is a reciprocal intent of this proposal, not primary. Not meant to be used for intent matching.",
+            "type": "boolean"
+        },
+        "note": {
+            "description": "A textual comment or description.",
+            "type": "string"
+        }
+    },
+    "required": ["publishes", "publishedIn"]
+}

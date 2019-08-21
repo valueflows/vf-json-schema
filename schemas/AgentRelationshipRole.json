@@ -1,16 +1,16 @@
 {
-    "$schema": "http://json-schema.org/draft-06/schema#",
-    "id": "https://raw.githubusercontent.com/valueflows/vf-json-schema/master/schemas/AgentRelationshipRole.json",
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/AgentRelationshipRole.json",
     "title": "AgentRelationshipRole",
     "description": "A relationship role defining the kind of association one agent can have with another.",
     "type": "object",
     "properties": {
         "label": {
-            "description": "The name of the role, from subject agent to object agent.",
+            "description": "The human readable name of the role, from the subject to the object.",
             "type": "string"
         },
         "inverseLabel": {
-            "description": "The inverse name of the role, from object agent to subject agent.",
+            "description": "The human readable name of the role, from the object to the subject.",
             "type": "string"
         }
     },
