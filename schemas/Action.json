@@ -1,0 +1,20 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/Action.json",
+    "title": "Action",
+    "description": "An action verb defining the kind of event, commitment, or intent.",
+    "type": "object",
+    "properties": {
+        "name": {
+            "description": "An informal or formal textual identifier for an action. Does not imply uniqueness.",
+            "type": "string",
+            "enum": ["dropoff", "pickup", "consume", "use", "work", "cite", "produce", "accept", "modify", "pass", "fail", "deliver-service", "transfer-all-rights", "transfer-custody", "transfer-complete", "move", "raise", "lower"]
+        },
+        "resourceEffect": {
+            "description": "The effect of an economic event on a resource, increment, decrement, no effect, or decrement resource and increment 'to' resource.",
+            "type": "string",
+            "enum": ["+", "-", "0", "-+"]
+        }
+    },
+    "required": ["name", "resourceEffect"]
+}

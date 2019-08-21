@@ -1,6 +1,6 @@
 {
-    "$schema": "http://json-schema.org/draft-06/schema#",
-    "id": "https://raw.githubusercontent.com/valueflows/vf-json-schema/master/schemas/EconomicResource.json",
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/EconomicResource.json",
     "title": "EconomicResource",
     "description": "A resource which is useful to people or the ecosystem.",
     "type": "object",
@@ -9,34 +9,63 @@
             "description": "An informal or formal textual identifier for an object. Does not imply uniqueness.",
             "type": "string"
         },
-        "currentQuantity": {
-            "description": "The current amount and unit of the economic resource.",
-            "$ref": "https://raw.githubusercontent.com/valueflows/vf-json-schema/master/schemas/QuantityValue.json"
+        "accountingQuantity": {
+            "description": "The current amount and unit of the economic resource for which the agent has primary rights and responsibilities, sometimes thought of as ownership. This can be either stored or derived from economic events affecting the resource.",
+            "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/QuantityValue.json"
         },
-        "resourceClassifiedAs": {
-            "description": "A resource's primary classification, as part of describing that resource.",
-            "type": "string"
+        "onhandQuantity": {
+            "description": "The current amount and unit of the economic resource which is under direct control of the agent.  It may be more or less than the accounting quantity. This can be either stored or derived from economic events affecting the resource.",
+            "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/QuantityValue.json"
+        },
+        "conformsTo": {
+            "description": "The primary resource knowledge specification or definition of an existing or potential resource.",
+            "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/ResourceSpecification.json"
+        },
+        "classifiedAs": {
+            "description": "References one or more concepts in a common taxonomy or other classification scheme for purposes of categorization or grouping.",
+            "type": "array",
+                "items": {
+                    "type": "string",
+                    "format": "uri"
+                }
+        },
+        "unitOfEffort": {
+            "description": "The unit used for use action on this resource or work or cite action in the recipe.",
+            "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/Unit.json"
         },
         "trackingIdentifier": {
-            "description": "Sometimes called lot number, used for trackable batched resources. Sometimes called serial number, used when each item must have a trackable identifier (like a computer). Could also be used for other unique tracking identifiers needed for resources.",
+            "description": "Sometimes called serial number, used when each item must have a traceable identifier (like a computer). Could also be used for other unique tracking identifiers needed for resources.",
             "type": "string"
+        },
+        "lot": {
+            "description": "Lot or batch of an economic resource, used to track forward or backwards to all occurrences of resources of that lot. Note more than one resource can be of the same lot.",
+            "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/ProductBatch.json"
+        },
+        "stage": {
+            "description": "References the ProcessSpecification of the last process the desired economic resource went through. Stage is used when the last process is important for finding proper resources, such as where the publishing process wants only documents that have gone through the editing process.",
+            "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/ProcessSpecification.json"
+        },
+        "state": {
+            "description": "The state of the desired economic resource (pass or fail), after coming out of a test or review process. Can be derived from the last event if a pass or fail event.",
+            "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/Action.json"
         },
         "currentLocation": {
             "description": "The current place an economic resource is located.  Could be at any level of granularity, from a town to an address to a warehouse location.  Should be mappable.",
             "type": "string"
         },
+        "image": {
+            "description": "The uri to an image relevant to the item, such as a photo, diagram, etc.",
+            "type": "string", 
+            "format": "uri"
+        },
         "note": {
             "description": "A textual comment or description.",
             "type": "string"
         },
-        "containeds": {
+        "containedIn": {
             "description": "Used when a stock economic resource contains items also defined as economic resources.",
-            "$ref": "https://raw.githubusercontent.com/valueflows/vf-json-schema/master/schemas/EconomicResource.json"
-        },
-        "underlyingResource": {
-            "description": "A more concrete resource upon which a resource is based.",
-            "$ref": "https://raw.githubusercontent.com/valueflows/vf-json-schema/master/schemas/EconomicResource.json"
+            "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/EconomicResource.json"
         }
     },
-    "required": ["resourceClassifiedAs", "quantity" ]
+    "required": ["resourceConformsTo"]
 }

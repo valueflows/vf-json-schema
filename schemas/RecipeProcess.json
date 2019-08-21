@@ -1,0 +1,34 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/RecipeProcess.json",
+    "title": "RecipeProcess",
+    "description": "Specifies a process in a recipe for use in planning from recipe.",
+    "type": "object",
+    "properties": {
+        "name": {
+            "description": "An informal or formal textual identifier for the item. Does not imply uniqueness.",
+            "type": "string"
+        },
+        "hasDuration": {
+            "description": "The planned calendar duration of the process as defined for the recipe batch.",
+            "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/Duration.json"
+        },
+        "processConformsTo": {
+            "description": "The standard specification or definition of a process.",
+            "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/ProcessSpecification.json"
+        },
+        "processClassifiedAs": {
+            "description": "References a concept in a common taxonomy or other classification scheme for purposes of categorization.",
+            "type": "array",
+                "items": {
+                    "type": "string",
+                    "format": "uri"
+                }
+        },
+        "note": {
+            "description": "A textual comment or description.",
+            "type": "string"
+        }
+    },
+    "required": ["name", "processConformsTo"]
+}

@@ -1,0 +1,22 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/ScenarioDefinition.json",
+    "title": "ScenarioDefinition",
+    "description": "The type definition of one or more scenarios, such as Yearly Budget.",
+    "type": "object",
+    "properties": {
+        "name": {
+            "description": "An informal or formal textual identifier for the item. Does not imply uniqueness.",
+            "type": "string"
+        },
+        "hasDuration": {
+            "description": "The duration of the scenario, often an accounting period.",
+            "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/Duration.json"
+        },
+        "note": {
+            "description": "A textual comment or description.",
+            "type": "string"
+        }
+    },
+    "required": ["name"]
+}

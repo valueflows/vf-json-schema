@@ -1,0 +1,22 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/Appreciation.json",
+    "title": "Appreciation",
+    "description": "A way to tie an economic event that is given in loose fulfilment for another economic event, without commitments or expectations. Supports the gift economy.",
+    "type": "object",
+    "properties": {
+        "appreciationOf": {
+            "description": "The economic event this appreciation has been given in acknowledgement of.",
+            "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/EconomicEvent.json"
+        },
+        "appreciationWith": {
+            "description": "The economic event provided as a gift in appreciation.",
+            "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/EconomicEvent.json"
+        },
+        "note": {
+            "description": "A textual comment or description.",
+            "type": "string"
+        }
+    },
+    "required": ["name"]
+}

@@ -1,0 +1,29 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/Settlement.json",
+    "title": "Settlement",
+    "description": "Represents many-to-many relationships between claim and economic events that fully or partially settle one or more claims.",
+    "type": "object",
+    "properties": {
+        "settledBy": {
+            "description": "The economic event fully or partially settling a claim.",
+            "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/EconomicEvent.json"
+        },"settles": {
+            "description": "A claim that is fully or partially settled by an economic event.",
+            "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/Claim.json"
+        },
+        "resourceQuantity": {
+            "description": "The amount and unit of the economic resource counted or inventoried.",
+            "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/QuantityValue.json"
+        },
+        "effortQuantity": {
+            "description": "The amount and unit of the work or use or citation effort-based action. This is often a time duration, but also could be cycle counts or other measures of effort or usefulness.",
+            "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/QuantityValue.json"
+        },
+        "note": {
+            "description": "A textual comment or description.",
+            "type": "string"
+        }
+    },
+    "required": ["settledBy", "settles"]
+}
