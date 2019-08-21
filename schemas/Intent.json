@@ -6,7 +6,7 @@
     "type": "object",
     "properties": {
         "action": {
-            "description": "Relates a process input or output to a verb, such as consume, produce, work, improve, etc.",
+            "description": "Relates an intent to a verb, such as consume, produce, work, improve, etc.",
             "type": "string"
         },
         "resourceQuantity": {
@@ -60,7 +60,7 @@
             "format": "date-time"
         },
         "hasPointInTime": {
-            "description": "The planned date/time for the intent.",
+            "description": "The planned date/time for the intent. Can be used instead of beginning and end.",
             "type": "string",
             "format": "date-time"
         },

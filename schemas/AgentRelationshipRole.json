@@ -6,11 +6,11 @@
     "type": "object",
     "properties": {
         "label": {
-            "description": "The human readable name of the role, from the subject to the object.",
+            "description": "The human readable name of the role, from the subject to the object.  For example, 'is member of'.",
             "type": "string"
         },
         "inverseLabel": {
-            "description": "The human readable name of the role, from the object to the subject.",
+            "description": "The human readable name of the role, from the object to the subject. For example, 'has member'.",
             "type": "string"
         }
     },

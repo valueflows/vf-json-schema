@@ -6,7 +6,7 @@
     "type": "object",
     "properties": {
         "name": {
-            "description": "An informal or formal textual identifier for an agent. Does not imply uniqueness.",
+            "description": "An informal or formal textual identifier for an action. Does not imply uniqueness.",
             "type": "string",
             "enum": ["dropoff", "pickup", "consume", "use", "work", "cite", "produce", "accept", "modify", "pass", "fail", "deliver-service", "transfer-all-rights", "transfer-custody", "transfer-complete", "move", "raise", "lower"]
         },
@@ -16,5 +16,5 @@
             "enum": ["+", "-", "0", "-+"]
         }
     },
-    "required": ["name"]
+    "required": ["name", "resourceEffect"]
 }

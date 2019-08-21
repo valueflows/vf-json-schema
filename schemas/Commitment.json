@@ -6,11 +6,11 @@
     "type": "object",
     "properties": {
         "action": {
-            "description": "Relates a process input or output to a verb, such as consume, produce, work, improve, etc.",
+            "description": "Relates a commitment to a verb, such as consume, produce, work, improve, etc.",
             "type": "string"
         },
         "resourceQuantity": {
-            "description": "The amount and unit of the economic resource counted or inventoried.",
+            "description": "The amount and unit of the economic resource counted or inventoried. This is the quantity that could be used to increment or decrement a resource, depending on the type of resource and resource effect of action.",
             "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/QuantityValue.json"
         },
         "effortQuantity": {
@@ -64,7 +64,7 @@
             "format": "date-time"
         },
         "hasPointInTime": {
-            "description": "The planned date/time for the commitment.",
+            "description": "The planned date/time for the commitment. Can be used instead of beginning and end.",
             "type": "string",
             "format": "date-time"
         },

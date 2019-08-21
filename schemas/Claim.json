@@ -6,7 +6,7 @@
     "type": "object",
     "properties": {
         "action": {
-            "description": "Relates a process input or output to a verb, such as consume, produce, work, improve, etc.",
+            "description": "Relates a claim to a verb, such as consume, produce, work, improve, etc.",
             "type": "string"
         },
         "resourceQuantity": {
