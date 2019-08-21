@@ -2,7 +2,7 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/Scenario.json",
     "title": "Scenario",
-    "description": "Supports including intents in multiple proposals, as well as a proposal including multiple intents.",
+    "description": "An estimated or analytical logical collection of higher level processes used for budgeting, analysis, plan refinement, etc.",
     "type": "object",
     "properties": {
         "name": {

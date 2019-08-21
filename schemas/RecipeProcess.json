@@ -2,7 +2,7 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/RecipeProcess.json",
     "title": "RecipeProcess",
-    "description": "Specifies the process part of a recipe for use in planning from recipe.",
+    "description": "Specifies a process in a recipe for use in planning from recipe.",
     "type": "object",
     "properties": {
         "name": {

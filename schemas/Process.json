@@ -41,14 +41,6 @@
             "description": "The definition or specification for a process.",
             "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/ProcessSpecification.json"
         },
-        "classifiedAs": {
-            "description": "References one or more concepts in a common taxonomy or other classification scheme for purposes of categorization or grouping.",
-            "type": "array",
-                "items": {
-                    "type": "string",
-                    "format": "uri"
-                }
-        },
         "inScopeOf": {
             "description": "Grouping around something to create a boundary or context, used for documenting, accounting, planning.",
             "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/Agent.json"

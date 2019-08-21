@@ -34,7 +34,7 @@
             "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/ResourceSpecification.json"
         },
         "stage": {
-            "description": "The last stage the desired economic resource went through.",
+            "description": "References the ProcessSpecification of the last process the desired economic resource went through. Stage is used when the last process is important for finding proper resources, such as where the publishing process wants only documents that have gone through the editing process.",
             "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/ProcessSpecification.json"
         },
         "state": {
