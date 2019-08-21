@@ -1,0 +1,18 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/Duration.json",
+    "title": "Duration",
+    "description": "A time duration.",
+    "type": "object",
+    "properties": {
+        "numericDuration": {
+            "description": "A numeric value.",
+            "type": "number"
+        },
+        "unitType": {
+            "description": "A unit of time duration.",
+            "type": "string"
+        }
+    },
+    "required": ["numericDuration", "unitType"]
+}
