@@ -10,7 +10,7 @@
             "type": "string"
         },
         "created": {
-            "description": "The date/time the plan was created.",
+            "description": "The date/time the plan was made.",
             "type": "string",
             "format": "date-time"
         },

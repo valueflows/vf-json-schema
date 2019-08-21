@@ -38,7 +38,7 @@
                 }
         },
         "basedOn": {
-            "description": "The recipe definition or specification for a process.",
+            "description": "The definition or specification for a process.",
             "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/ProcessSpecification.json"
         },
         "classifiedAs": {
