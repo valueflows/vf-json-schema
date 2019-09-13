@@ -5,8 +5,8 @@
     "description": "An action verb defining the kind of event, commitment, or intent.",
     "type": "object",
     "properties": {
-        "name": {
-            "description": "An informal or formal textual identifier for an action. Does not imply uniqueness.",
+        "label": {
+            "description": "A unique verb which defines the action.",
             "type": "string",
             "enum": ["dropoff", "pickup", "consume", "use", "work", "cite", "produce", "accept", "modify", "pass", "fail", "deliver-service", "transfer-all-rights", "transfer-custody", "transfer-complete", "move", "raise", "lower"]
         },
