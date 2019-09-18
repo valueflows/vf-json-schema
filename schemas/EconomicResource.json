@@ -51,7 +51,7 @@
         },
         "currentLocation": {
             "description": "The current place an economic resource is located.  Could be at any level of granularity, from a town to an address to a warehouse location.  Should be mappable.",
-            "type": "string"
+            "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/SpatialThing.json"
         },
         "image": {
             "description": "The uri to an image relevant to the item, such as a photo, diagram, etc.",

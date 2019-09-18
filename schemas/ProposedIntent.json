@@ -16,10 +16,6 @@
         "reciprocal": {
             "description": "This is a reciprocal intent of this proposal, not primary. Not meant to be used for intent matching.",
             "type": "boolean"
-        },
-        "note": {
-            "description": "A textual comment or description.",
-            "type": "string"
         }
     },
     "required": ["publishes", "publishedIn"]

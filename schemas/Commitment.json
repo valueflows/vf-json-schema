@@ -78,6 +78,11 @@
             "type": "string",
             "format": "date-time"
         },
+        "created": {
+            "description": "The creation time of the commitment.",
+            "type": "string",
+            "format": "date-time"
+        },
         "finished": {
             "description": "The commitment is complete or not.  This is irrespective of if the original goal has been met, and indicates that no more will be done.",
             "type": "boolean"
@@ -108,7 +113,8 @@
         },
         "agreedIn": {
             "description": "Reference to an agreement between agents which specifies the rules or policies or calculations which govern this commitment.",
-            "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/Agreement.json"
+            "type": "string",
+            "format": "uri"
         }
     },
     "required": ["action"]
