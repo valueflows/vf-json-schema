@@ -100,7 +100,8 @@
         },
         "agreedIn": {
             "description": "Reference to an agreement between agents which specifies the rules or policies or calculations which govern this economic event.",
-            "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/Agreement.json"
+            "type": "string",
+            "format": "uri"
         }
     },
     "required": ["action"]

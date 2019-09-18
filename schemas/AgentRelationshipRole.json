@@ -12,6 +12,10 @@
         "inverseLabel": {
             "description": "The human readable name of the role, from the object to the subject. For example, 'has member'.",
             "type": "string"
+        },
+        "note": {
+            "description": "A textual comment or description.",
+            "type": "string"
         }
     },
     "required": ["label"]

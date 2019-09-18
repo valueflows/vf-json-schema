@@ -17,6 +17,10 @@
             "description": "The object of a relationship between 2 agents. For example, if Mary is a member of a group, then the group is the object.",
             "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/Agent.json"
         },
+        "inScopeOf": {
+            "description": "Grouping around something to create a boundary or context.",
+            "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/Agent.json"
+        },
         "note": {
             "description": "A textual comment or description.",
             "type": "string"

@@ -5,10 +5,6 @@
     "description": "The specification of a resource inflow to, or outflow from, a recipe process.",
     "type": "object",
     "properties": {
-        "name": {
-            "description": "An informal or formal textual identifier for the item. Does not imply uniqueness.",
-            "type": "string"
-        },
         "action": {
             "description": "Relates a process input or output to a verb, such as consume, produce, work, modify, etc.",
             "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/Action.json"

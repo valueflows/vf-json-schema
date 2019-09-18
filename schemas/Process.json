@@ -49,6 +49,10 @@
             "description": "The process with its inputs and outputs is part of the plan.",
             "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/Plan.json"
         },
+        "nestedIn": {
+            "description": "The process with its inputs and outputs is part of the scenario.",
+            "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/Scenario.json"
+        },
         "finished": {
             "description": "The process is complete or not. This is irrespective of if the original goal has been met, and indicates that no more will be done.",
             "type": "boolean"
