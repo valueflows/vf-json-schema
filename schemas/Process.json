@@ -19,16 +19,6 @@
             "type": "string",
             "format": "date-time"
         },
-        "before": {
-            "description": "The due date/time of the process.",
-            "type": "string",
-            "format": "date-time"
-        },
-        "after": {
-            "description": "The process can start after this date/time.",
-            "type": "string",
-            "format": "date-time"
-        },
         "classifiedAs": {
             "description": "References one or more concepts in a common taxonomy or other classification scheme for purposes of categorization or grouping.",
             "type": "array",

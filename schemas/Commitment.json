@@ -11,11 +11,11 @@
         },
         "resourceQuantity": {
             "description": "The amount and unit of the economic resource counted or inventoried. This is the quantity that could be used to increment or decrement a resource, depending on the type of resource and resource effect of action.",
-            "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/QuantityValue.json"
+            "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/Measure.json"
         },
         "effortQuantity": {
             "description": "The amount and unit of the work or use or citation effort-based action. This is often a time duration, but also could be cycle counts or other measures of effort or usefulness.",
-            "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/QuantityValue.json"
+            "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/Measure.json"
         },
         "resourceInventoriedAs": {
             "description": "Economic resource involved in the commitment.",
@@ -32,14 +32,6 @@
         "resourceConformsTo": {
             "description": "The primary resource specification or definition of an existing or potential economic resource. A resource will have only one, as this specifies exactly what the resource is.",
             "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/ResourceSpecification.json"
-        },
-        "stage": {
-            "description": "References the ProcessSpecification of the last process the desired economic resource went through. Stage is used when the last process is important for finding proper resources, such as where the publishing process wants only documents that have gone through the editing process.",
-            "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/ProcessSpecification.json"
-        },
-        "state": {
-            "description": "The state of the desired economic resource (pass or fail), after coming out of a test or review process.",
-            "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/Action.json"
         },
         "provider": {
             "description": "The economic agent from whom the commitment is initiated.",
@@ -68,13 +60,8 @@
             "type": "string",
             "format": "date-time"
         },
-        "before": {
+        "due": {
             "description": "The due date/time of the commitment.",
-            "type": "string",
-            "format": "date-time"
-        },
-        "after": {
-            "description": "The commitment can start after this date/time.",
             "type": "string",
             "format": "date-time"
         },

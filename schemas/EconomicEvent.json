@@ -11,11 +11,11 @@
         },
         "resourceQuantity": {
             "description": "The amount and unit of the economic resource counted or inventoried. This is the quantity that could be used to increment or decrement a resource, depending on the type of resource and resource effect of action.",
-            "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/QuantityValue.json"
+            "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/Measure.json"
         },
         "effortQuantity": {
             "description": "The amount and unit of the work or use or citation effort-based action. This is often a time duration, but also could be cycle counts or other measures of effort or usefulness.",
-            "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/QuantityValue.json"
+            "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/Measure.json"
         },
         "resourceInventoriedAs": {
             "description": "Economic resource involved in the economic event.",
@@ -61,16 +61,6 @@
         },
         "hasPointInTime": {
             "description": "The date/time at which the economic event occurred. Can be used instead of beginning and end.",
-            "type": "string",
-            "format": "date-time"
-        },
-        "before": {
-            "description": "The economic event occurred prior to this date/time.",
-            "type": "string",
-            "format": "date-time"
-        },
-        "after": {
-            "description": "The economic event occurred after this date/time.",
             "type": "string",
             "format": "date-time"
         },

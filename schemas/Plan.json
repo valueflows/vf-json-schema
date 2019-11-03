@@ -14,7 +14,7 @@
             "type": "string",
             "format": "date-time"
         },
-        "before": {
+        "due": {
             "description": "The due date/time of the plan.",
             "type": "string",
             "format": "date-time"

@@ -15,15 +15,15 @@
         },
         "resourceQuantity": {
             "description": "The amount and unit of the economic resource counted or inventoried.",
-            "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/QuantityValue.json"
+            "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/Measure.json"
         },
         "effortQuantity": {
             "description": "The amount and unit of the work or use or citation effort-based action. This is often a time duration, but also could be cycle counts or other measures of effort or usefulness.",
-            "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/QuantityValue.json"
+            "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/Measure.json"
         },
         "availableQuantity": {
             "description": "The total quantity of the offered resource available.",
-            "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/QuantityValue.json"
+            "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/Measure.json"
         },
         "resourceInventoriedAs": {
             "description": "Economic resource involved in the intent.",
@@ -68,13 +68,8 @@
             "type": "string",
             "format": "date-time"
         },
-        "before": {
+        "due": {
             "description": "The due date/time of the intent.",
-            "type": "string",
-            "format": "date-time"
-        },
-        "after": {
-            "description": "The intent can start after this date/time.",
             "type": "string",
             "format": "date-time"
         },

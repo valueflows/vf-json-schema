@@ -11,11 +11,11 @@
         },
         "resourceQuantity": {
             "description": "The amount and unit of the economic resource counted or inventoried.",
-            "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/QuantityValue.json"
+            "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/Measure.json"
         },
         "effortQuantity": {
             "description": "The amount and unit of the work or use or citation effort-based action. This is often a time duration, but also could be cycle counts or other measures of effort or usefulness.",
-            "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/QuantityValue.json"
+            "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/Measure.json"
         },
         "resourceClassifiedAs": {
             "description": "References a concept in a common taxonomy or other classification scheme for purposes of categorization or grouping.",
@@ -41,7 +41,7 @@
             "description": "Grouping around something to create a boundary or context, used for documenting, accounting, planning.",
             "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/Agent.json"
         },
-        "before": {
+        "due": {
             "description": "The due date/time of the claim.",
             "type": "string",
             "format": "date-time"

@@ -5,11 +5,11 @@
     "description": "A relationship role defining the kind of association one agent can have with another.",
     "type": "object",
     "properties": {
-        "label": {
+        "roleLabel": {
             "description": "The human readable name of the role, from the subject to the object.  For example, 'is member of'.",
             "type": "string"
         },
-        "inverseLabel": {
+        "inverseRoleLabel": {
             "description": "The human readable name of the role, from the object to the subject. For example, 'has member'.",
             "type": "string"
         },

@@ -13,7 +13,17 @@
         "resourceEffect": {
             "description": "The effect of an economic event on a resource, increment, decrement, no effect, or decrement resource and increment 'to' resource.",
             "type": "string",
-            "enum": ["+", "-", "0", "-+"]
+            "enum": ["increment", "decrement", "noEffect", "decrementIncrement"]
+        },
+        "inputOutput": {
+            "description": "Denotes if a process input or output, or not related to a process.",
+            "type": "string",
+            "enum": ["input", "output", "notApplicable"]
+        },
+        "pairsWith": {
+            "description": "The action that should be included on the other direction of the process, for example accept with modify.",
+            "type": "string",
+            "enum": ["notApplicable", "dropoff", "pickup", "accept", "modify", "pass", "fail"]
         }
     },
     "required": ["name", "resourceEffect"]

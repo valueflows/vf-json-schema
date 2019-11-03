@@ -14,11 +14,11 @@
         },
         "resourceQuantity": {
             "description": "The amount and unit of the economic resource counted or inventoried.",
-            "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/QuantityValue.json"
+            "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/Measure.json"
         },
         "effortQuantity": {
             "description": "The amount and unit of the work or use or citation effort-based action. This is often a time duration, but also could be cycle counts or other measures of effort or usefulness.",
-            "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/QuantityValue.json"
+            "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/Measure.json"
         },
         "note": {
             "description": "A textual comment or description.",

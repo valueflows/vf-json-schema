@@ -1,0 +1,18 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/Unit.json",
+    "title": "Unit",
+    "description": "A unit of measure.",
+    "type": "object",
+    "properties": {
+        "label": {
+            "description": "A standard label for the unit of measure.",
+            "type": "string"
+        },
+        "sybmol": {
+            "description": "A standard symbol of the unit of measure.",
+            "type": "string"
+        }
+    },
+    "required": ["label"]
+}

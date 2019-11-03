@@ -11,11 +11,11 @@
         },
         "resourceQuantity": {
             "description": "The amount and unit of the economic resource counted or inventoried.",
-            "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/QuantityValue.json"
+            "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/Measure.json"
         },
         "effortQuantity": {
             "description": "The amount and unit of the work or use or citation effort-based action. This is often a time duration, but also could be cycle counts or other measures of effort or usefulness.",
-            "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/QuantityValue.json"
+            "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/Measure.json"
         },
         "recipeFlowResource": {
             "description": "The resource definition referenced by this flow in the recipe.",
@@ -28,14 +28,6 @@
         "recipeOutputOf": {
             "description": "Relates an output flow to its process in a recipe.",
             "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/RecipeProcess.json"
-        },
-        "stage": {
-            "description": "References the ProcessSpecification of the last process the desired economic resource went through. Stage is used when the last process is important for finding proper resources, such as where the publishing process wants only documents that have gone through the editing process.",
-            "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/ProcessSpecification.json"
-        },
-        "state": {
-            "description": "The state of the desired economic resource (pass or fail), after coming out of a test or review process.",
-            "$ref": "https://raw.githubusercontent.com/valueflows/valueflows/master/json-schemas/Action.json"
         },
         "note": {
             "description": "A textual comment or description.",
