@@ -9,7 +9,7 @@
             "description": "A standard label for the unit of measure.",
             "type": "string"
         },
-        "sybmol": {
+        "symbol": {
             "description": "A standard symbol of the unit of measure.",
             "type": "string"
         }
